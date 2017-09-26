@@ -23,6 +23,7 @@
 		public $people = array();
 		
 		//This function may need a constructor to specify parameters
+		//Currently useless
 		/*public function __construct($price, $destination, $warranty, $people)
 		{
 			$this->price= $price;

@@ -45,7 +45,6 @@
 	//Display
 	if(isset($error))
 	{
-		require 'view/v_error.php';
 		require 'view/v_step1.php';
 	}
 	else

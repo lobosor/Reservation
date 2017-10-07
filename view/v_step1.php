@@ -12,6 +12,8 @@
 			The cancellation insurance costs $20 whatever the number of passengers.
 		</p>
 		
+		<?php require 'view/v_error.php'; ?>
+		
 		<form method="post" action="index.php">
 			<p>
 				<?php

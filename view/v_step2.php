@@ -19,20 +19,20 @@
 			<p>
 				<?php
 					
-					for($i = 0; $i<$myBooking->numberOfPassengers;$i++)
+					for($i = 0; $i<$myBooking->getNumberOfPassengers();$i++)
 					{
-						if(isset($myBooking->passengers[$i]->name))
+						if($myBooking->getPassenger($i)->getName() !== null )
 						{
-							$nameProperty = new Property("value", $myBooking->passengers[$i]->name);
+							$nameProperty = new Property("value", $myBooking->getPassenger($i)->getName());
 						}
 						else
 						{
 							$nameProperty = "";
 						}
 
-						if(isset($myBooking->passengers[$i]->age))
+						if($myBooking->getPassenger($i)->getAge() !== null)
 						{
-							$ageProperty = new Property("value", $myBooking->passengers[$i]->age);
+							$ageProperty = new Property("value", $myBooking->getPassenger($i)->getAge());
 						}
 						else
 						{

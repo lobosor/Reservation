@@ -12,11 +12,11 @@
 		
 			<p>				
 				<?php
-					for($i = 0; $i<$myBooking->numberOfPassengers;$i++)
+					for($i = 0; $i<$myBooking->getNumberOfPassengers();$i++)
 					{
 						echo 'Passenger '.($i+1).' :'.'<br />';
-						echo $myBooking->passengers[$i]->name.'<br />';
-						echo $myBooking->passengers[$i]->age.' years'.'<br />';
+						echo $myBooking->getPassenger($i)->getName().'<br />';
+						echo $myBooking->getPassenger($i)->getAge().' years'.'<br />';
 						echo '<br />';
 					}	
 				?>

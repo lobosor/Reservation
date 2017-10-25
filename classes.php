@@ -1,5 +1,4 @@
 <?php
-	//Note : Utility of Person now ?
 	
 	//Generates HTML input + label 
 	//__toString() makes it possible to use it as :
@@ -56,8 +55,8 @@
 	
 	class Person
 	{
-		public $name;
-		public $age;
+		private $name;
+		private $age;
 		
 		public function __construct($name, $age)
 		{
@@ -65,10 +64,20 @@
 			$this->age = $age;
 		}
 		
+		public function getName()
+		{
+			return $this->name;
+		}
+		
 		public function setName($name)
 		{
 			$this->name = $name;
 		}
+		
+		public function getAge()
+		{
+			return $this->age;
+		}		
 		
 		public function setAge($age)
 		{
@@ -78,11 +87,10 @@
 
 	class Booking
 	{
-		public $price;
-		public $destination;
-		public $insurance;
-		public $numberOfPassengers;
-		public $passengers = array();
+		private $destination;
+		private $insurance;
+		private $numberOfPassengers;
+		private $passengers = array();
 		
 		public function __construct()
 		{
@@ -91,23 +99,48 @@
 			$this->insurance= 0;
 		}
 		
-		public function addPerson($person)
+		public function getDestination()
 		{
-			array_push($this->passengers, $person);
+			return $this->destination;
 		}
 		
-		public function removePerson()
+		public function setDestination($destination)
 		{
-			array_pop($this->passengers);
+			$this->destination = $destination;
 		}
 		
-		public function reset()
+		public function getInsurance()
 		{
-			$this->destination = "";
-			$this->numberOfPassengers= 0;
-			$this->insurance= 0;
-			$this->price = 0;
-			$this->passengers = array ();
+			if($this->insurance)
+			{
+				return "checked";
+			}
+			else
+			{
+				return "";
+			}
+		}
+		
+		public function setInsurance($insurance)
+		{
+			$this->insurance = $insurance;
+		}
+		
+		public function getNumberOfPassengers()
+		{
+			return $this->numberOfPassengers;
+		}
+		
+		public function getPassenger($index)
+		{
+			if(isset($this->passengers[$index]))
+			{
+				return $this->passengers[$index];
+			}
+			else
+			{
+				return null;
+			}
 		}
 		
 		public function getPrice()
@@ -118,7 +151,7 @@
 			{
 				foreach ($this->passengers as $person)
 				{
-					if($person->age >12)
+					if($person->getAge() >12)
 					{
 						$price += 15;
 					}
@@ -129,7 +162,7 @@
 				}
 			}
 				
-				if(($this->insurance == "checked")||($this->insurance == 1))
+				if(($this->insurance == 1))
 				{
 					$price += 20;
 				}
@@ -137,6 +170,27 @@
 			return $price;
 		}
 		
+		public function addPerson($person)
+		{
+			array_push($this->passengers, $person);
+			$this->numberOfPassengers++;
+		}
+		
+		public function removePerson()
+		{
+			if(array_pop($this->passengers)!=null)
+			{
+				$this->numberOfPassengers--;
+			}
+		}
+		
+		public function reset()
+		{
+			$this->destination = "";
+			$this->numberOfPassengers= 0;
+			$this->insurance= 0;
+			$this->passengers = array ();
+		}
 	}
 
 ?>

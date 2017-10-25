@@ -1,45 +1,43 @@
 <?php
 	
 	//Update
-	if(isset($_POST['destination'])&&$_POST['destination']!="")
+	if(isset($_POST['destination']) && $_POST['destination']!="")
 	{
-		$myBooking->destination = $_POST['destination'];
+		$myBooking->setDestination($_POST['destination']);
 	}
-	else if($myBooking->destination =="")
+	else if($myBooking->getDestination() =="")
 	{
 		$error['destination'] = 1;
 	}
 	
-	if(isset($_POST['numberOfPassengers'])&&$_POST['numberOfPassengers']>0)
+	if(isset($_POST['numberOfPassengers']) && $_POST['numberOfPassengers']>0 && $_POST['numberOfPassengers'] < 300)
 	{		
 		//Need further tests
 		for($i =0; $i <$_POST['numberOfPassengers']; $i++)
 		{
-			if(!isset($myBooking->passengers[$i]))
+			if($myBooking->getPassenger($i)=== null)
 			{
 				$myBooking->addPerson(new Person("",0));
-				$myBooking->numberOfPassengers++;
 			}			
 		}
 		
-		while($myBooking->numberOfPassengers > $_POST['numberOfPassengers'])
+		while($myBooking->getNumberOfPassengers() > $_POST['numberOfPassengers'])
 		{
 			$myBooking->removePerson();
-			$myBooking->numberOfPassengers--;
 		}
 	}
-	else if ($myBooking->numberOfPassengers == 0)
+	else if ($myBooking->getNumberOfPassengers() == 0)
 	{
 		$error['numberPeople'] = 1;
 	}
 	
 	if(isset($_POST['insurance']))
 	{
-		$myBooking->insurance = "checked";
+		$myBooking->setInsurance(1);
 	}
 	else
 	{
-		$myBooking->insurance = "";
+		$myBooking->setInsurance(0);
 	}
 	
 	//Display

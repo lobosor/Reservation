@@ -27,7 +27,6 @@
 	//Display
 	if(isset($error))
 	{
-		require 'view/v_error.php';
 		require 'view/v_step2.php';
 	}
 	else

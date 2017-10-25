@@ -12,7 +12,7 @@
 			$error['name'] = 1;
 		}
 		
-		if(isset($_POST['age'.$i]) && $_POST['age'.$i]!=0)
+		if(isset($_POST['age'.$i]) && $_POST['age'.$i] > 0 && $_POST['age'.$i] <= 130)
 		{
 			$myBooking->getPassenger($i)->setAge($_POST['age'.$i]);
 		}
@@ -26,7 +26,7 @@
 	
 	//Display
 	if(isset($error))
-	{
+	{		
 		require 'view/v_step2.php';
 	}
 	else

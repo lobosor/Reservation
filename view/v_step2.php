@@ -21,23 +21,8 @@
 					
 					for($i = 0; $i<$myBooking->getNumberOfPassengers();$i++)
 					{
-						if($myBooking->getPassenger($i)->getName() !== null )
-						{
-							$nameProperty = new Property("value", $myBooking->getPassenger($i)->getName());
-						}
-						else
-						{
-							$nameProperty = "";
-						}
-
-						if($myBooking->getPassenger($i)->getAge() !== null)
-						{
-							$ageProperty = new Property("value", $myBooking->getPassenger($i)->getAge());
-						}
-						else
-						{
-							$ageProperty = "";
-						}						
+						$nameProperty = new Property("value", $myBooking->getPassenger($i)->getName());
+						$ageProperty = new Property("value", $myBooking->getPassenger($i)->getAge());
 						
 						echo new Input("name".$i, "text", "Name :", $nameProperty);
 						echo new Input("age".$i, "number", "Age :", $ageProperty);

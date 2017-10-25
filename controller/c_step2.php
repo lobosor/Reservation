@@ -46,7 +46,7 @@
 		require 'view/v_step1.php';
 	}
 	else
-	{
+	{		
 		require 'view/v_step2.php';
 	}
 ?>

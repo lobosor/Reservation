@@ -5,7 +5,7 @@
 	</head>
 	
 	<body>
-		<h1> Booking</h1>
+		<h1>Booking</h1>
 		
 		<p>
 			The adult fare is $15. The fare under 12 years old is $10.<br/>

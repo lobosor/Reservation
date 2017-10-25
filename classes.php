@@ -8,8 +8,8 @@
 	
 	class Property
 	{
-		public $name;
-		public $value;
+		private $name;
+		private $value;
 		
 		public function __construct($name, $value)
 		{
@@ -26,10 +26,10 @@
 	
 	class Input
 	{
-		public $name;
-		public $type;
-		public $label;
-		public $property;
+		private $name;
+		private $type;
+		private $label;
+		private $property;
 		
 		
 		public function __construct($name, $type, $label, $property)

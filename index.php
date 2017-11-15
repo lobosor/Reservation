@@ -4,13 +4,13 @@
 	
 	require 'classes.php';
 	
-	if(isset($_SESSION['booking']))
+	if(isset($_SESSION['reservation']))
 	{
-		$myBooking = unserialize($_SESSION['booking']);
+		$myBooking = unserialize($_SESSION['reservation']);
 	}
 	else
 	{
-		$myBooking = new Booking();
+		$myBooking = new Reservation();
 	}
 		
 	
@@ -31,5 +31,5 @@
 		require 'controller/c_step1.php';
 	}
 	
-	$_SESSION['booking'] = serialize($myBooking);
+	$_SESSION['reservation'] = serialize($myBooking);
 ?>

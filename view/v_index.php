@@ -1,15 +1,16 @@
 <html>
 	<head>
-		<title>Booking</title>
+		<title>Resevation</title>
 		<link rel = "stylesheet" type = "text/css" href ="form.css" >
 	</head>
 	
 	<body>
-		<h1>Booking</h1>
+		<h1>Reservation</h1>
 		
 		<p>
-			The adult fare is $15. The fare under 12 years old is $10.<br/>
-			The cancellation insurance costs $20 whatever the number of passengers.
+			Prix adulte: 15$. Prix enfant: 12$.
+			Assurance: 20$.
+
 		</p>
 		
 		<?php require 'view/v_error.php'; ?>
@@ -19,8 +20,8 @@
 				<?php
 				
 					echo new Input("destination","text","Destination : ", new Property("value", $myBooking->getDestination()));
-					echo new Input("numberOfPassengers","number","Number of passengers : ", new Property("value", $myBooking->getNumberOfPassengers()));
-					echo new Input("insurance", "checkbox", "Cancellation insurance", $myBooking->getInsurance());
+					echo new Input("numberOfPassengers","number","Nombre de passagers : ", new Property("value", $myBooking->getNumberOfPassengers()));
+					echo new Input("insurance", "checkbox", "Assurance", $myBooking->getInsurance());
 				
 				?>
 				<!--
@@ -37,8 +38,8 @@
 				-->
 			</p>
 			
-			<input type="submit" name="step2" value="Next">
-			<input type="submit" name="cancel" value="Cancel">
+			<input type="submit" name="Check" value="Next">
+			<input type="submit" name="Cancel" value="Cancel">
 			
 		</form>
 		

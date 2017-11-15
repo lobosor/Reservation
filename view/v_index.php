@@ -1,4 +1,4 @@
-/*<html>
+ /*<html>
 	<head>
 		<title>Resevation</title>
 		<link rel = "stylesheet" type = "text/css" href ="form.css" >
@@ -17,13 +17,15 @@
 		
 		<form method="post" action="index.php">
 			<p>
-				/*<?php
 				
-					echo new Input("destination","text","Destination : ", new Property("value", $myBooking->getDestination()));
-					echo new Input("numberOfPassengers","number","Nombre de passagers : ", new Property("value", $myBooking->getNumberOfPassengers()));
-					echo new Input("insurance", "checkbox", "Assurance", $myBooking->getInsurance());
-				
-				?>*/
+				//<?php
+				//
+				//	echo new Input("destination","text","Destination : ", new Property("value", $myBooking->getDestination()));
+				//	echo new Input("numberOfPassengers","number","Nombre de passagers : ", new Property("value", $myBooking->getNumberOfPassengers()));
+				//	echo new Input("insurance", "checkbox", "Assurance", $myBooking->getInsurance());
+				//
+				//?>
+			
 				<label for="destination">Destination : </label>
 				<input id ="destination" type="text" name="destination">
 					<select name="menu_destination" id="menu_destination_liste">

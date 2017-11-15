@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Booking | Confirmation</title>
+		<title>Reservation | Confirmation</title>
 		<link rel = "stylesheet" type = "text/css" href ="form.css" >
 	</head>
 	
@@ -22,7 +22,7 @@
 				?>
 			</p>
 			
-				<input type="submit" name="step2" value="Previous">
+				<input type="submit" name="details" value="Previous">
 				<input type="submit" name="step4" value="Confirm">
 				<input type="submit" name="cancel" value="Cancel">
 				

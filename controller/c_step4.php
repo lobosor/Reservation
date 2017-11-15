@@ -1,5 +1,5 @@
 <?php
 
-	require 'view/v_step4.php';
+	require 'view/v_Complete.php';
 
 ?>

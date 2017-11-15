@@ -6,7 +6,7 @@
 	//
 	//echo new Input(
 	
-	class Property
+/*	class Property
 	{
 		private $name;
 		private $value;
@@ -52,7 +52,7 @@
 			return $labelField.$inputField.'<br />';
 		}
 	}
-	
+	*/
 	class Person
 	{
 		private $name;
@@ -96,42 +96,46 @@
 		{
 			$this->destination = "";
 			$this->numberOfPassengers= 0;
-			$this->insurance= 0;
+			$this->insurance= False;
 		}
 		
-		public function getDestination()
+		public function GetDestination()
 		{
 			return $this->destination;
 		}
 		
-		public function setDestination($destination)
+		public function SetDestination($destination)
 		{
 			$this->destination = $destination;
 		}
 		
-		public function getInsurance()
+		public function GetInsurance()
 		{
 			if($this->insurance)
 			{
-				return "checked";
+				return True;
 			}
 			else
 			{
-				return "";
+				return False;
 			}
 		}
 		
-		public function setInsurance($insurance)
+		public function SetInsurance()
 		{
-			$this->insurance = $insurance;
+			$this->insurance = True;
+		}
+		public function UnsetInsurance()
+		{
+			$this->insurance = False;
 		}
 		
-		public function getNumberOfPassengers()
+		public function GetNumberOfPassengers()
 		{
 			return $this->numberOfPassengers;
 		}
 		
-		public function getPassenger($index)
+		public function GetPassenger($index)
 		{
 			if(isset($this->passengers[$index]))
 			{
@@ -143,7 +147,7 @@
 			}
 		}
 		
-		public function getPrice()
+		public function GetPrice()
 		{
 			$price = 0;
 			
@@ -170,13 +174,13 @@
 			return $price;
 		}
 		
-		public function addPerson($person)
+		public function AddPerson($person)
 		{
 			array_push($this->passengers, $person);
 			$this->numberOfPassengers++;
 		}
 		
-		public function removePerson()
+		public function RemovePerson()
 		{
 			if(array_pop($this->passengers)!=null)
 			{
@@ -184,11 +188,11 @@
 			}
 		}
 		
-		public function reset()
+		public function Reset()
 		{
 			$this->destination = "";
 			$this->numberOfPassengers= 0;
-			$this->insurance= 0;
+			$this->insurance=False;
 			$this->passengers = array ();
 		}
 	}

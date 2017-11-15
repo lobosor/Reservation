@@ -1,4 +1,4 @@
-<html>
+html>
 	<head>
 		<title>Booking | Details</title>
 		<link rel = "stylesheet" type = "text/css" href ="form.css" >
@@ -32,9 +32,9 @@
 				?>		
 			</p>
 			
-			<input type="submit" name="step1" value="Previous">
-			<input type="submit" name="step3" value="Next">
-			<input type="submit" name="cancel" value="Cancel">
+			<input type="submit" name="Index" value="Previous">
+			<input type="submit" name="Confirm" value="Next">
+			<input type="submit" name="Cancel" value="Cancel">
 			
 		</form>	
 		

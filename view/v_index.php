@@ -42,7 +42,7 @@
 				<input id ="insurance" type="checkbox" name="insurance">
 			</p>
 			
-			<input type="submit" name="Check" value="Next">
+			<input type="submit" name="Details" value="Next">
 			<input type="submit" name="Cancel" value="Cancel">
 			
 		</form>

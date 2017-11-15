@@ -27,11 +27,11 @@
 	//Display
 	if(isset($error))
 	{		
-		require 'view/v_step2.php';
+		require 'view/v_Confirm.php';
 	}
 	else
 	{
-		require 'view/v_step3.php';
+		require 'view/v_Complete.php';
 	}
 	
 ?>

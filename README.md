@@ -1,2 +1,4 @@
-# Booking
-School project : Booking website in PHP using MVC model.
+# Reservation
+
+Cours de Mr. Dekimpe
+Technologie internet: Application reservation

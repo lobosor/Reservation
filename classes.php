@@ -85,7 +85,7 @@
 		}
 	}
 
-	class Booking
+	class Reservation
 	{
 		private $destination;
 		private $insurance;

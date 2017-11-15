@@ -7,7 +7,7 @@
 	}
 	else if($myBooking->getDestination() =="")
 	{
-		$error['destination'] = 1;
+		$error['destination'] = True;
 	}
 	
 	if(isset($_POST['numberOfPassengers']) && $_POST['numberOfPassengers']>0 && $_POST['numberOfPassengers'] < 300)
@@ -15,7 +15,7 @@
 		//Need further tests
 		for($i =0; $i <$_POST['numberOfPassengers']; $i++)
 		{
-			if($myBooking->getPassenger($i)=== null)
+			if($myBooking->getPassenger($i)== null)
 			{
 				$myBooking->addPerson(new Person("",0));
 			}			
@@ -28,25 +28,25 @@
 	}
 	else if ($myBooking->getNumberOfPassengers() == 0)
 	{
-		$error['numberPeople'] = 1;
+		$error['numberPeople'] = True;
 	}
 	
 	if(isset($_POST['insurance']))
 	{
-		$myBooking->setInsurance(1);
+		$myBooking->SetInsurance();
 	}
 	else
 	{
-		$myBooking->setInsurance(0);
+		$myBooking->UnsetInsurance();
 	}
 	
 	//Display
 	if(isset($error))
 	{
-		require 'view/v_step1.php';
+		require 'view/v_index.php';
 	}
 	else
 	{		
-		require 'view/v_step2.php';
+		require 'view/v_Confirm.php';
 	}
 ?>

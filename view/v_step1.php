@@ -5,7 +5,7 @@
 	</head>
 	
 	<body>
-		<h1> Booking</h1>
+		<h1>Booking</h1>
 		
 		<p>
 			The adult fare is $15. The fare under 12 years old is $10.<br/>
@@ -18,9 +18,9 @@
 			<p>
 				<?php
 				
-					echo new Input("destination","text","Destination : ", new Property("value", $myBooking->destination));
-					echo new Input("numberOfPassengers","number","Number of passengers : ", new Property("value", $myBooking->numberOfPassengers));
-					echo new Input("insurance", "checkbox", "Cancellation insurance", $myBooking->insurance);
+					echo new Input("destination","text","Destination : ", new Property("value", $myBooking->getDestination()));
+					echo new Input("numberOfPassengers","number","Number of passengers : ", new Property("value", $myBooking->getNumberOfPassengers()));
+					echo new Input("insurance", "checkbox", "Cancellation insurance", $myBooking->getInsurance());
 				
 				?>
 				<!--

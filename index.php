@@ -21,7 +21,7 @@
 		
 		if(is_file($page))
 		{
-			$pageLoaded = 1;
+			$pageLoaded = True;
 			require $page;
 		}
 	}

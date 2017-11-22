@@ -23,21 +23,19 @@
 		}
 	}
 	
-	
+*/	
 	class Input
 	{
 		private $name;
 		private $type;
 		private $label;
-		private $property;
 		
 		
-		public function __construct($name, $type, $label, $property)
+		public function __construct($name, $type, $label)
 		{
 			$this->name = $name;
 			$this->type = $type;
 			$this->label = $label;
-			$this->property =  $property;
 		}
 		
 		public function __toString ()
@@ -45,18 +43,17 @@
 			$labelField = '<label for="'.$this->name.'">'.$this->label.'</label>';
 			$inputField = '<input id ="'.$this->name.'" type="'.$this->type.'" name="'.$this->name.'"';
 			
-			$inputField .= $this->property;
 			
 			$inputField .= '>';
 			
 			return $labelField.$inputField.'<br />';
 		}
 	}
-	*/
+	
 	class Person
 	{
-		private $name;
-		private $age;
+		public $name;
+		public $age;
 		
 		public function __construct($name, $age)
 		{
@@ -166,7 +163,7 @@
 				}
 			}
 				
-				if(($this->insurance == 1))
+				if(($this->insurance == True))
 				{
 					$price += 20;
 				}

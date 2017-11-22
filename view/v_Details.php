@@ -1,4 +1,4 @@
-html>
+<html>
 	<head>
 		<title>Booking | Details</title>
 		<link rel = "stylesheet" type = "text/css" href ="form.css" >
@@ -21,18 +21,16 @@ html>
 					
 					for($i = 0; $i<$myBooking->getNumberOfPassengers();$i++)
 					{
-						$nameProperty = new Property("value", $myBooking->getPassenger($i)->getName());
-						$ageProperty = new Property("value", $myBooking->getPassenger($i)->getAge());
-						
-						echo new Input("name".$i, "text", "Name :", $nameProperty);
-						echo new Input("age".$i, "number", "Age :", $ageProperty);
+											
+						echo new Input("name".$i, "text", "Name :");
+						echo new Input("age".$i, "number", "Age :");
 						echo '<br />';
 					}					
 					
 				?>		
 			</p>
 			
-			<input type="submit" name="Index" value="Previous">
+			<input type="submit" name="index" value="Previous">
 			<input type="submit" name="Confirm" value="Next">
 			<input type="submit" name="Cancel" value="Cancel">
 			

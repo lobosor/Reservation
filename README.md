@@ -1,4 +1,4 @@
 # Reservation
 
-Cours de M. Dekimpe
+Cours de Mr. Dekimpe
 Technologie internet: Application reservation

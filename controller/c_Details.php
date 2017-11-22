@@ -47,6 +47,6 @@
 	}
 	else
 	{		
-		require 'view/v_Confirm.php';
+		require 'view/v_Details.php';
 	}
 ?>

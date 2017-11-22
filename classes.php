@@ -29,6 +29,7 @@
 		private $name;
 		private $type;
 		private $label;
+		//private $previousV;
 		
 		
 		public function __construct($name, $type, $label)
@@ -42,7 +43,7 @@
 		{
 			$labelField = '<label for="'.$this->name.'">'.$this->label.'</label>';
 			$inputField = '<input id ="'.$this->name.'" type="'.$this->type.'" name="'.$this->name.'"';
-			
+			//$inputField .= ' value="<?php echo ' .$this->name.';>"';
 			
 			$inputField .= '>';
 			

@@ -1,0 +1,18 @@
+label
+{
+    display: block;
+    width: 300px;
+    float: left;
+}
+
+html, body
+{
+	height : 100%;
+	width : 100%
+}
+
+.error
+{
+	color : red;
+}
+

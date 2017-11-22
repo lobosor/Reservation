@@ -24,14 +24,14 @@
 		
 	}
 	
-	//Display
+	/*Display
 	if(isset($error))
-	{		
+	{	*/	
 		require 'view/v_Confirm.php';
-	}
+	/* }
 	else
 	{
 		require 'view/v_Complete.php';
-	}
+	}*/
 	
 ?>

@@ -6,10 +6,10 @@
 	
 	<body>
 	
-		<h1>Details</h1>
+		<h1>Détails</h1>
 		
 		<p>
-			Please enter the name and age of the passengers.
+			Entrez le nom et l'age des passagers
 		</p>
 		
 		<?php require 'view/v_error.php'; ?>
@@ -22,7 +22,7 @@
 					for($i = 0; $i<$myBooking->getNumberOfPassengers();$i++)
 					{
 											
-						echo new Input("name".$i, "text", "Name :");
+						echo new Input("name".$i, "text", "Nom :");
 						echo new Input("age".$i, "number", "Age :");
 						echo '<br />';
 					}					

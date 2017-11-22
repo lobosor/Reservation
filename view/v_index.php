@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Resevation</title>
+		<title>Reservation</title>
 		<link rel = "stylesheet" type = "text/css" href ="form.css" >
 	</head>
 	
@@ -8,7 +8,7 @@
 		<h1>Reservation</h1>
 		
 		<p>
-			Prix adulte: 15$. Prix enfant: 12$.
+			Prix adulte: 15$. Prix enfant: 10$.
 			Assurance: 20$.
 
 		</p>

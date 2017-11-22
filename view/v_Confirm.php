@@ -7,6 +7,7 @@
 	<body>
 	
 		<h1>Confirmation</h1>
+		<?php require 'view/v_error.php'; ?>
 		
 		<form method="post" action="index.php">
 		

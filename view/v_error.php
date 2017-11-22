@@ -23,6 +23,11 @@
 				echo 'Please enter an age greater than 0 for all the passengers.<br/>';
 			}
 			
+			if (isset($error['majeur']))
+			{
+				echo 'Un passager doit etre majeur.<br/>';
+			}
+			
 			echo '</p></div>';
 	}		
 ?>
